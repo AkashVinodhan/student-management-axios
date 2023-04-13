@@ -16,7 +16,7 @@ export default function Provider(props) {
       .post("https://64340404582420e231718e94.mockapi.io/students/", {
         ...data,
       })
-      .then((res) => console.log(res.data));
+      .then((res) => fetchStudents());
   };
 
   const updateStudent = (id, data) => {
@@ -24,7 +24,7 @@ export default function Provider(props) {
       .put("https://64340404582420e231718e94.mockapi.io/students/" + id, {
         ...data,
       })
-      .then((res) => console.log(res.data));
+      .then((res) => fetchStudents());
   };
 
   const deleteStudent = (id) => {
